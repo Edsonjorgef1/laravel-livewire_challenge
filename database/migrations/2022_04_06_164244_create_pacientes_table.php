@@ -19,7 +19,7 @@ return new class extends Migration
             $table->datetime('Data_de_nascimento');
             $table->string('sexo');
             $table->string('Profissao')->nullable();
-            $table->string('Endereço');
+            $table->string('Endereco');
             $table->string('Seguro')->nullable();
             $table->string('Contacto')->nullable();
             $table->timestamps();
