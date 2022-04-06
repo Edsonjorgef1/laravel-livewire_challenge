@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('consultas', function (Blueprint $table) {
             $table->id();
-            $table->string('');
+            $table->string('sector_medico')->nullable();
             $table->datetime('data_entrada');
             $table->datetime('data_saida')->nullable();
             $table->time('horario_entrada')->nullable();
