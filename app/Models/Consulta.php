@@ -12,8 +12,6 @@ class Consulta extends Model
     protected $fillable = [
         'sector_medico',
         'data_entrada',
-        'data_saida',
-        // 'status',
         'observacao',
         'paciente_id',
     ];

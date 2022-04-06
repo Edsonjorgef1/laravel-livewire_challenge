@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->string('sector_medico')->nullable();
             $table->datetime('data_entrada');
-            $table->datetime('data_saida')->nullable();
             $table->string('observacao')->nullable();
             $table->unsignedBigInteger('paciente_id');
             $table->foreign('paciente_id')->references('id')->on('pacientes')->onDelete('cascade');

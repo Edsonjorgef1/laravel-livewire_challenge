@@ -38,16 +38,11 @@
 
 
               <div class="mb-4">
-                  <label for="exampleFormControlInput6" class="block text-gray-700 text-sm font-bold mb-2">Horario da consulta (Entrada):</label>
-                  <input type="datetime-local" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput6" placeholder="Insira o horario da consulta" wire:model="data_entrada" required>
+                  <label for="exampleFormControlInput4" class="block text-gray-700 text-sm font-bold mb-2">Horario da consulta (Entrada):</label>
+                  <input type="datetime-local" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput4" placeholder="Insira o horario da consulta" wire:model="data_entrada" required>
                   @error('data_entrada') <span class="text-red-500">{{ $message }}</span>@enderror
               </div>
 
-              <div class="mb-4">
-                <label for="exampleFormControlInput6" class="block text-gray-700 text-sm font-bold mb-2">Horario da consulta (Saida):</label>
-                <input type="datetime-local" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput6" placeholder="Insira o horario da consulta" wire:model="data_saida">
-                @error('data_saida') <span class="text-red-500">{{ $message }}</span>@enderror
-            </div>
           </div>
         </div>
   

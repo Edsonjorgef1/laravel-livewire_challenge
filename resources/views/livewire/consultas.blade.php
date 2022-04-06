@@ -25,7 +25,6 @@
                         <th class="px-4 py-2 w-20">No.</th>
                         <th class="px-4 py-2">Departamento</th>
                         <th class="px-4 py-2">Data de Entrada</th>
-                        <th class="px-4 py-2">Data de Saida</th>
                         <th class="px-4 py-2">Observacao</th>
                         <th class="px-4 py-2">Paciente</th>
                         <th class="px-4 py-2">Accao</th>
@@ -37,7 +36,6 @@
                         <td class="border px-4 py-2">{{ $consulta->id }}</td>
                         <td class="border px-4 py-2">{{ $consulta->sector_medico }}</td>
                         <td class="border px-4 py-2">{{ $consulta->data_entrada }}</td>
-                        <td class="border px-4 py-2">{{ $consulta->data_saida }}</td>
                         <td class="border px-4 py-2">{{ $consulta->observacao }}</td>
                         <td class="border px-4 py-2">{{ $consulta->paciente->Nome }}</td>
                         <td class="border px-4 py-2">

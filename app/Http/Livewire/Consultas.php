@@ -9,7 +9,7 @@ use App\Models\Paciente;
 class Consultas extends Component
 {
     public $isOpen = 0; // Check if Modal is opened
-    public $consulta_id,$sector_medico,$data_saida,$horario_entrada,$status,$observacao,$paciente_id;
+    public $consulta_id,$sector_medico,$observacao,$paciente_id,$data_entrada;
 
     public function render()
     {
@@ -63,12 +63,8 @@ class Consultas extends Component
         // Resetar o formulario (todos campos)
         $this->sector_medico = '';
         $this->data_entrada  = '';
-        $this->data_saida  = '';
-        // $this->horario_entrada  = '';
-        $this->status  = '';
         $this->observacao  = '';
         $this->paciente_id = '';
-
     }
 
     /**
@@ -80,23 +76,24 @@ class Consultas extends Component
     {
         $this->validate([
             'data_entrada' => 'required',
-            // 'horario_entrada' => 'required',
         ]);
 
+        if(Consulta::where('data_entrada','=',$this->data_entrada)->first()){
+            session()->flash('message', 'Já existe consulta marcada neste horário!');
+        }else{
             Consulta::updateOrCreate(['id' => $this->consulta_id], 
             [
                 'sector_medico' => $this->sector_medico,
                 'data_entrada'  => $this->data_entrada,
-                'data_saida'  => $this->data_saida,
-                // 'horario_entrada'  => $this->horario_entrada,
-                'status'  => $this->status,
                 'observacao'  => $this->observacao,
                 'paciente_id'  => $this->paciente_id,
             ]);
 
-        session()->flash('message',
+            session()->flash('message',
             $this->consulta_id ? 'Consulta actualizada com sucesso.' : 'Consulta criada com sucesso.');
 
+        }
+        
         $this->closeModal();
         $this->resetInputFields();
     }
@@ -113,10 +110,7 @@ class Consultas extends Component
         $this->consulta_id = $id;
         $this->sector_medico = $consulta->sector_medico;
         $this->data_entrada = $consulta->data_entrada;
-        $this->data_saida  = $consulta->data_saida;
-        $this->status  = $consulta->status;
         $this->observacao  = $consulta->observacao;
-        $this->horario_entrada  = $consulta->horario_entrada;
         $this->paciente_id = $consulta->paciente_id;
 
         $this->openModal();
