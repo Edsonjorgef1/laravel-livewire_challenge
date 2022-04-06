@@ -17,38 +17,44 @@
                   <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput1" placeholder="Insira o Nome do paciente" wire:model="Nome">
                   @error('Nome') <span class="text-red-500">{{ $message }}</span>@enderror
               </div>
+
               <div class="mb-4">
-                <label for="exampleFormControlInput1" class="block text-gray-700 text-sm font-bold mb-2">Sexo:</label>
-                <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput1" placeholder="Insira o nome do paciente" wire:model="Sexo">
+                <label for="exampleFormControlInput2" class="block text-gray-700 text-sm font-bold mb-2">Sexo:</label>
+                <select wire:model.lazy="Sexo" name="Sexo"  class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput2">
+                      <option value="">Seleccione Aqui...</option>
+                      <option value="Masculino">Masculino</option>
+                      <option value="Feminino">Feminino</option>
+                </select>
                 @error('Sexo') <span class="text-red-500">{{ $message }}</span>@enderror
             </div>
+
             <div class="mb-4">
-                <label for="exampleFormControlInput1" class="block text-gray-700 text-sm font-bold mb-2">Profissao:</label>
-                <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput1" placeholder="Insira a Profissao do paciente" wire:model="Profissao">
+                <label for="exampleFormControlInput3" class="block text-gray-700 text-sm font-bold mb-2">Profissao:</label>
+                <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput3" placeholder="Insira a Profissao do paciente" wire:model="Profissao">
                 @error('Profissao') <span class="text-red-500">{{ $message }}</span>@enderror
             </div>
 
             <div class="mb-4">
-                <label for="exampleFormControlInput1" class="block text-gray-700 text-sm font-bold mb-2">Endereco:</label>
-                <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput1" placeholder="Insira o Endereco do paciente" wire:model="Endereco">
+                <label for="exampleFormControlInput4" class="block text-gray-700 text-sm font-bold mb-2">Endereco:</label>
+                <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput4" placeholder="Insira o Endereco do paciente" wire:model="Endereco">
                 @error('Endereco') <span class="text-red-500">{{ $message }}</span>@enderror
             </div>
 
             <div class="mb-4">
-                <label for="exampleFormControlInput1" class="block text-gray-700 text-sm font-bold mb-2">Contacto:</label>
-                <input type="number" max="10000000000" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput1" placeholder="Insira o Contacto do paciente" wire:model="Contacto">
+                <label for="exampleFormControlInput5" class="block text-gray-700 text-sm font-bold mb-2">Contacto:</label>
+                <input type="number" max="10000000000" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput5" placeholder="Insira o Contacto do paciente" wire:model="Contacto">
                 @error('Contacto') <span class="text-red-500">{{ $message }}</span>@enderror
             </div>
 
             <div class="mb-4">
-                <label for="exampleFormControlInput1" class="block text-gray-700 text-sm font-bold mb-2">Seguro:</label>
-                <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput1" placeholder="Insira o Seguro" wire:model="Seguro">
+                <label for="exampleFormControlInput5" class="block text-gray-700 text-sm font-bold mb-2">Seguro:</label>
+                <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput5" placeholder="Insira o Seguro" wire:model="Seguro">
                 @error('Seguro') <span class="text-red-500">{{ $message }}</span>@enderror
             </div>
 
             <div class="mb-4">
-                <label for="exampleFormControlInput1" class="block text-gray-700 text-sm font-bold mb-2">Data de nascimento:</label>
-                <input type="datetime-local" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput1" placeholder="Insira a data de nascimento" wire:model="Data_de_nascimento">
+                <label for="exampleFormControlInput6" class="block text-gray-700 text-sm font-bold mb-2">Data de nascimento:</label>
+                <input type="datetime-local" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput6" placeholder="Insira a data de nascimento" wire:model="Data_de_nascimento">
                 @error('Data_de_nascimento') <span class="text-red-500">{{ $message }}</span>@enderror
             </div>
         </div>
