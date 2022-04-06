@@ -13,8 +13,7 @@ class Consulta extends Model
         'sector_medico',
         'data_entrada',
         'data_saida',
-        'horario_entrada',
-        'status',
+        // 'status',
         'observacao',
         'paciente_id',
     ];

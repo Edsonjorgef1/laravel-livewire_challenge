@@ -13,14 +13,14 @@
       <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
         <div class="">
               <div class="mb-4">
-                  <label for="exampleFormControlInput1" class="block text-gray-700 text-sm font-bold mb-2">Nome:</label>
-                  <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput1" placeholder="Insira o Nome do paciente" wire:model="Nome">
+                  <label for="exampleFormControlInput1" class="block text-gray-700 text-sm font-bold mb-2">Nome Completo:</label>
+                  <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput1" placeholder="Insira o Nome do paciente" wire:model="Nome" required>
                   @error('Nome') <span class="text-red-500">{{ $message }}</span>@enderror
               </div>
 
               <div class="mb-4">
                 <label for="exampleFormControlInput2" class="block text-gray-700 text-sm font-bold mb-2">Sexo:</label>
-                <select wire:model.lazy="Sexo" name="Sexo"  class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput2">
+                <select wire:model.lazy="Sexo" name="Sexo"  class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput2" required>
                       <option value="">Seleccione Aqui...</option>
                       <option value="Masculino">Masculino</option>
                       <option value="Feminino">Feminino</option>
@@ -36,13 +36,13 @@
 
             <div class="mb-4">
                 <label for="exampleFormControlInput4" class="block text-gray-700 text-sm font-bold mb-2">Endereco:</label>
-                <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput4" placeholder="Insira o Endereco do paciente" wire:model="Endereco">
+                <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput4" placeholder="Insira o Endereco do paciente" wire:model="Endereco" required>
                 @error('Endereco') <span class="text-red-500">{{ $message }}</span>@enderror
             </div>
 
             <div class="mb-4">
                 <label for="exampleFormControlInput5" class="block text-gray-700 text-sm font-bold mb-2">Contacto:</label>
-                <input type="number" max="10000000000" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput5" placeholder="Insira o Contacto do paciente" wire:model="Contacto">
+                <input type="number" max="10000000000" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput5" placeholder="Insira o Contacto do paciente" wire:model="Contacto" required>
                 @error('Contacto') <span class="text-red-500">{{ $message }}</span>@enderror
             </div>
 
@@ -54,7 +54,7 @@
 
             <div class="mb-4">
                 <label for="exampleFormControlInput6" class="block text-gray-700 text-sm font-bold mb-2">Data de nascimento:</label>
-                <input type="datetime-local" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput6" placeholder="Insira a data de nascimento" wire:model="Data_de_nascimento">
+                <input type="datetime-local" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput6" placeholder="Insira a data de nascimento" wire:model="Data_de_nascimento" required>
                 @error('Data_de_nascimento') <span class="text-red-500">{{ $message }}</span>@enderror
             </div>
         </div>

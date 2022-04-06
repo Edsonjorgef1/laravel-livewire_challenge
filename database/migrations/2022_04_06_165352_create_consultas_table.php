@@ -18,8 +18,6 @@ return new class extends Migration
             $table->string('sector_medico')->nullable();
             $table->datetime('data_entrada');
             $table->datetime('data_saida')->nullable();
-            $table->time('horario_entrada')->nullable();
-            $table->string('status')->default('Agendado');
             $table->string('observacao')->nullable();
             $table->unsignedBigInteger('paciente_id');
             $table->foreign('paciente_id')->references('id')->on('pacientes')->onDelete('cascade');
