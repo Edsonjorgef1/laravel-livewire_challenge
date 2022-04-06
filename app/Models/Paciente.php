@@ -14,7 +14,7 @@ class Paciente extends Model
         'Data_de_nascimento',
         'sexo',
         'Profissao',
-        'Endereço',
+        'Endereco',
         'Seguro',
         'Contacto',
     ];
