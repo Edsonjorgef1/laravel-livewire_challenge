@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Livewire\Pacientes;
+use App\Http\Livewire\Consultas;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +32,7 @@ Route::middleware([
 
 
     Route::get('pacientes', Pacientes::class)->name('pacientes');
+    Route::get('consultas', Consultas::class)->name('consultas');
 
 });
 
