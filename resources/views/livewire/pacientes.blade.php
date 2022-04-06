@@ -24,8 +24,8 @@
                     <tr class="bg-gray-100">
                         <th class="px-4 py-2 w-20">No.</th>
                         <th class="px-4 py-2">Nome</th>
-                        <th class="px-4 py-2">Data_de_nascimento</th>
-                        <th class="px-4 py-2">sexo</th>
+                        <th class="px-4 py-2">Data de Nascimento</th>
+                        <th class="px-4 py-2">Sexo</th>
                         <th class="px-4 py-2">Profissao</th>
                         <th class="px-4 py-2">Endereco</th>
                         <th class="px-4 py-2">Seguro</th>

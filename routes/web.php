@@ -30,7 +30,7 @@ Route::middleware([
     })->name('dashboard');
 
 
-    Route::get('pacientes', Pacientes::class);
+    Route::get('pacientes', Pacientes::class)->name('pacientes');
 
 });
 
