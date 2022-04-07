@@ -81,7 +81,7 @@ class Consultas extends Component
         if(Consulta::where('data_entrada','=',$this->data_entrada)->first()){
             session()->flash('message', 'Já existe consulta marcada neste horário!');
         }else{
-            Consulta::updateOrCreate(['id' => $this->consulta_id], 
+            Consulta::updateOrCreate(['id' => $this->consulta_id],
             [
                 'sector_medico' => $this->sector_medico,
                 'data_entrada'  => $this->data_entrada,
@@ -93,7 +93,7 @@ class Consultas extends Component
             $this->consulta_id ? 'Consulta actualizada com sucesso.' : 'Consulta criada com sucesso.');
 
         }
-        
+
         $this->closeModal();
         $this->resetInputFields();
     }
