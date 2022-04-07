@@ -1,6 +1,6 @@
-# INSTALACAO (PASSO A PASSO)
+# INSTALACAO
 
-<h2 style="color:cyan">Instalacao</h2>
+<h2 style="color:cyan">Passo a passo</h2>
 <ul>
     <li> > composer install</li>
     <li> > cp .env.example .env</li>
@@ -14,6 +14,7 @@
 </ul>
 
 # ESPECIFICACOES
+
 <h3>Base de Dados (Tabelas)</h3>
 
 <img src="DB_SCHEMA-FINAL.png"/>
