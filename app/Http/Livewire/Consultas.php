@@ -85,7 +85,7 @@ class Consultas extends Component
         ]);
 
         if(Consulta::where('data_entrada','=',$this->data_entrada)->first()){
-            session()->flash('message', 'Já existe consulta marcada neste horário!');
+            session()->flash('error', 'Já existe consulta marcada neste horário!');
         }else{
             Consulta::updateOrCreate(['id' => $this->consulta_id],
             [
