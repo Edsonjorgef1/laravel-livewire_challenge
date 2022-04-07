@@ -16,11 +16,12 @@ class Consultas extends Component
 
     public function render()
     {
-        $this->consultas = Consulta::get();
         $this->pacientes = Paciente::get();
+
         return view('livewire.consultas', [
-            'agendamentos' => Consulta::paginate(10);
+            'agendamentos' => Consulta::orderBy('id', 'desc')->paginate(7),
         ]);
+
     }
 
     public function mount()

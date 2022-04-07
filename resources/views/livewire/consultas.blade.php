@@ -14,7 +14,16 @@
                     </div>
                   </div>
                 </div>
+            {{-- @else
+            <div class="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md my-3" role="alert">
+                <div class="flex">
+                  <div>
+                    <p class="text-sm">{{ session('error') }}</p>
+                  </div>
+                </div>
+              </div> --}}
             @endif
+            
             <button wire:click="create()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-3">Nova Consulta</button>
             @if($isOpen)
                 @include('livewire.consultas_create')
@@ -31,7 +40,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($consultas as $consulta)
+                    @foreach($agendamentos as $consulta)
                     <tr>
                         <td class="border px-4 py-2">{{ $consulta->id }}</td>
                         <td class="border px-4 py-2">{{ $consulta->sector_medico }}</td>
