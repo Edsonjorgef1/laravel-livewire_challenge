@@ -46,6 +46,7 @@
                     @endforeach
                 </tbody>
             </table>
+            {{ $agendamentos->links() }}
         </div>
     </div>
 </div>
