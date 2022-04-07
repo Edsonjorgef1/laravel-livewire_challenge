@@ -3,11 +3,13 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
+use Livewire\WithPagination;
 use App\Models\Paciente;
 
 
 class Pacientes extends Component
 {
+    use WithPagination;
 
     public $pacientes, $Nome, $Data_de_nascimento, $Sexo, $Profissao, $Endereco, $Seguro, $Contacto, $paciente_id;
     public $isOpen = 0; // Check if Modal is opened
@@ -15,7 +17,9 @@ class Pacientes extends Component
     public function render()
     {
         $this->pacientes = Paciente::all();
-        return view('livewire.pacientes');
+        return view('livewire.pacientes', [
+            'patients' => Paciente::paginate(10),
+        ]);
     }
 
     public function mount()
