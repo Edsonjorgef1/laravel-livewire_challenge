@@ -22,8 +22,8 @@
                 <label for="exampleFormControlInput2" class="block text-gray-700 text-sm font-bold mb-2">Sexo:</label>
                 <select wire:model.lazy="Sexo" name="Sexo"  class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput2" required>
                       <option value="">Seleccione Aqui...</option>
-                      <option value="Masculino">Masculino</option>
-                      <option value="Feminino">Feminino</option>
+                      <option value="Masculino" {{ 'Masculino' == $Sexo ? 'selected' : '' }} >Masculino</option>
+                      <option value="Feminino" {{ 'Feminino' == $Sexo ? 'selected' : '' }} >Feminino</option>
                 </select>
                 @error('Sexo') <span class="text-red-500">{{ $message }}</span>@enderror
             </div>

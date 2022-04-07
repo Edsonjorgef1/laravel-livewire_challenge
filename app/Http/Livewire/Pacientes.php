@@ -111,7 +111,7 @@ class Pacientes extends Component
         $this->paciente_id = $id;
         $this->Nome = $paciente->Nome;
         $this->Data_de_nascimento = $paciente->Data_de_nascimento;
-        $this->Sexo  = $paciente->Sexo;
+        $this->Sexo  = $paciente->sexo;
         $this->Profissao  = $paciente->Profissao;
         $this->Endereco  = $paciente->Endereco;
         $this->Seguro  = $paciente->Seguro;
@@ -127,9 +127,7 @@ class Pacientes extends Component
      */
     public function delete($id)
     {
-        // Paciente::find($id)->delete();
-        $paciente = Paciente::find($id);
-        $paciente->delete();
+        Paciente::find($id)->delete();
         $this->closeModal();
         session()->flash('message', 'Paciente deletado com sucesso.');
     }
