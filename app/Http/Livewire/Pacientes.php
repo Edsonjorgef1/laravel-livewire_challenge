@@ -16,10 +16,10 @@ class Pacientes extends Component
 
     public function render()
     {
-        $this->pacientes = Paciente::all();
         return view('livewire.pacientes', [
-            'patients' => Paciente::paginate(10),
+            'patientes' => Paciente::orderBy('id', 'desc')->paginate(4),
         ]);
+
     }
 
     public function mount()

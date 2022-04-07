@@ -34,7 +34,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($pacientes as $paciente)
+                    @foreach($patientes as $paciente)
                     <tr>
                         <td class="border px-4 py-2">{{ $paciente->id }}</td>
                         <td class="border px-4 py-2">{{ $paciente->Nome }}</td>
@@ -52,7 +52,7 @@
                     @endforeach
                 </tbody>
             </table>
-            {{ $patients->links() }}
+            {{ $patientes->links() }}
         </div>
     </div>
 </div>
